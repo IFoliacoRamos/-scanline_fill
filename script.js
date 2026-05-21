@@ -259,6 +259,9 @@ const canvas = document.getElementById("canvas");
 // Contexto 2D
 const ctx = canvas.getContext("2d");
 
+// LIMPIAR CANVAS 
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
 // Crear instancia
 const scanline = new ScanlineFill(ctx);
 
