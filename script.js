@@ -281,6 +281,17 @@ const polygon = [
     { x: 120, y: 300 }
 ];
 
+const isValidPolygon = polygon.every(point =>
+    point.x >= 0 &&
+    point.x <= canvas.width &&
+    point.y >= 0 &&
+    point.y <= canvas.height
+);
+
+if (!isValidPolygon) {
+    console.error("El poligono contiene coordenadas fuera del canvas");
+}
+
 // ============================================================
 // DIBUJAR CONTORNO
 // ============================================================
